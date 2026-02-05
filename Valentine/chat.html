@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Chat 💬</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="heart-bg"></div>
+
+<div class="center">
+  <div class="card">
+    <h3>Chat with Me 💕</h3>
+    <div id="chat"></div>
+    <input id="msg" placeholder="Say something">
+    <button onclick="send()">Send</button>
+  </div>
+</div>
+
+<script>
+function send() {
+  const m = msg.value.toLowerCase();
+  let r = "I love you 💖";
+
+  if (m.includes("miss")) r = "I miss you more 🥹";
+  if (m.includes("love")) r = "Always you 💕";
+  if (m.includes("hi")) r = "Hello my sweetiepie! 😘";
+
+  chat.innerHTML += `<p>You: ${msg.value}</p><p>Me: ${r}</p>`;
+  msg.value = "";
+}
+</script>
+
+</body>
+</html>
